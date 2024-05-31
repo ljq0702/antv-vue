@@ -25,10 +25,14 @@ const timeChange = (date: Dayjs[]) => {
 const disabledDate = (current: Dayjs) => {
   return current && current > dayjs().endOf('day');
 }
+const getImg =  () => {
+  return new URL('assets/aa.jpg', import.meta.url).href
+}
 </script>
 
 <template>
   <a-button @click="openModal">弹窗</a-button>
+  <img :src="getImg()" alt="" width="100" height="100">
   <a-range-picker v-model:value="value1" @change="timeChange" format="YYYY-MM-DD" :disabledDate="disabledDate"  />
   <Home />
   <HelloWorld :isShow="show" @close="closeModal" />
