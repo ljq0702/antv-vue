@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    
+}
+.ant-btn-primary{
+    @apply bg-purple-400
+    
+}
+.ant-btn-primary:not(:disabled):hover {
+    @apply bg-purple-950
+}
